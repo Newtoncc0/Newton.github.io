@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07131f">
+  <title>Hamsi & Palamut</title>
+
+  <style>
+    :root {
+      --bg: #07131f;
+      --text: #f7fbff;
+      --muted: #b8c8d6;
+      --line: rgba(255,255,255,.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* HER ZAMAN YAN YANA */
+    .split {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .side {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 110px 6vw 150px;
+      overflow: hidden;
+    }
+
+    .side::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.65)
+      );
+    }
+
+    .hamsi {
+      border-right: 1px solid var(--line);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(7,24,39,.25),
+          rgba(7,18,29,.70)
+        ),
+        url("https://www.holidayhomesclub.ru/images/news/img56396544.jpeg")
+        center / cover no-repeat;
+    }
+
+    .palamut {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(5,18,29,.22),
+          rgba(5,15,25,.72)
+        ),
+        url("https://www.albashop.com.tr/palamut-baligi-ozellikleri-nelerdir-54-blog.png")
+        center / cover no-repeat;
+    }
+
+    .content {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 999px;
+      background: rgba(0,0,0,.25);
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 7rem);
+      line-height: .9;
+      letter-spacing: -.06em;
+      text-shadow: 0 10px 40px rgba(0,0,0,.5);
+    }
+
+    .subtitle {
+      margin: 22px auto 0;
+      max-width: 430px;
+      color: #eef7fc;
+      font-size: clamp(.8rem, 1.6vw, 1.15rem);
+      line-height: 1.5;
+      text-shadow: 0 3px 15px rgba(0,0,0,.7);
+    }
+
+    .fish {
+      margin: 30px auto 0;
+      width: min(430px, 95%);
+      height: 230px;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 22px rgba(0,0,0,.5));
+    }
+
+    /* ÜST BAŞLIK */
+    .brand {
+      position: fixed;
+      z-index: 10;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      padding: 9px 16px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 999px;
+
+      background: rgba(4,13,22,.8);
+      backdrop-filter: blur(14px);
+
+      font-weight: 800;
+      font-size: .8rem;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+
+    /* SAYAÇ */
+    .counter {
+      position: fixed;
+      z-index: 20;
+
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+
+      width: min(760px, calc(100% - 24px));
+
+      padding: 16px 20px;
+
+      text-align: center;
+
+      background: rgba(5,15,24,.88);
+      border: 1px solid rgba(255,255,255,.23);
+      border-radius: 20px;
+
+      backdrop-filter: blur(18px);
+
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+
+    .counter-label {
+      color: #c5d5e1;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: 5px;
+    }
+
+    .time {
+      font-variant-numeric: tabular-nums;
+      font-size: clamp(1rem, 3vw, 2.1rem);
+      font-weight: 900;
+    }
+
+    .date {
+      margin-top: 4px;
+      color: #9eb0bf;
+      font-size: .7rem;
+    }
+
+    /*
+      MOBİLDE DE YAN YANA KALIR.
+      EKRAN DARALIR AMA ALT ALTA GEÇMEZ.
+    */
+    @media (max-width: 760px) {
+
+      .split {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .side {
+        min-height: 100vh;
+        padding: 85px 8px 140px;
+      }
+
+      .hamsi {
+        border-right: 1px solid var(--line);
+        border-bottom: 0;
+      }
+
+      .eyebrow {
+        font-size: .5rem;
+        padding: 6px 7px;
+        letter-spacing: .08em;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 10vw, 3.8rem);
+      }
+
+      .subtitle {
+        font-size: .72rem;
+        line-height: 1.35;
+        padding: 0 3px;
+      }
+
+      .fish {
+        width: 100%;
+        height: 130px;
+        margin-top: 20px;
+      }
+
+      .brand {
+        top: 7px;
+        font-size: .6rem;
+        padding: 7px 10px;
+      }
+
+      .counter {
+        bottom: 7px;
+        width: calc(100% - 14px);
+        padding: 10px 7px;
+        border-radius: 15px;
+      }
+
+      .counter-label {
+        font-size: .5rem;
+        letter-spacing: .08em;
+      }
+
+      .time {
+        font-size: clamp(.72rem, 3.8vw, 1.1rem);
+      }
+
+      .date {
+        font-size: .5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="brand">
+      🐟 BALIK TEZGÂHI
+    </div>
+
+    <div class="split">
+
+      <!-- HAMSİ TARAFI -->
+      <section class="side hamsi">
+
+        <div class="content">
+
+          <div class="eyebrow">
+            Karadeniz'in klasiği
+          </div>
+
+          <h1>
+            Hamsi<br>
+            Sevgi
+          </h1>
+
+          <p class="subtitle">
+            Hamsi Sevdalısı ❤️
+          </p>
+
+          <img
+            class="fish"
+            src="https://www.holidayhomesclub.ru/images/news/img56396544.jpeg"
+            alt="Hamsi balığı"
+          >
+
+        </div>
+
+      </section>
+
+
+      <!-- PALAMUT TARAFI -->
+      <section class="side palamut">
+
+        <div class="content">
+
+          <div class="eyebrow">
+            Palamut tarafı
+          </div>
+
+          <h1>
+            Palamut Newton
+          </h1>
+
+          <p class="subtitle">
+          Palamut Sevdalısı ❤️
+          </p>
+
+          <img
+            class="fish"
+            src="https://www.albashop.com.tr/palamut-baligi-ozellikleri-nelerdir-54-blog.png"
+            alt="Palamut balığı"
+          >
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- SAYAÇ -->
+    <div class="counter">
+
+      <div class="counter-label">
+        Balık Tezgâhı şu kadar süredir açık
+      </div>
+
+      <div class="time" id="counter">
+        Hesaplanıyor...
+      </div>
+
+      <div class="date" id="since"></div>
+
+    </div>
+
+  </main>
+
+
+  <script>
+
+    /*
+      BALIK TEZGÂHI AÇILIŞ TARİHİ
+
+      Bugün:
+      11 Ağustos 2026
+
+      Saat kısmını istersen değiştirebilirsin.
+    */
+
+    const START_DATE = "2026-08-11T00:00:00+03:00";
+
+    const counter = document.getElementById("counter");
+    const since = document.getElementById("since");
+
+    const start = new Date(START_DATE);
+
+
+    function two(number) {
+      return String(number).padStart(2, "0");
+    }
+
+
+    function updateCounter() {
+
+      const now = new Date();
+
+      let difference =
+        now.getTime() - start.getTime();
+
+
+      if (difference < 0) {
+
+        counter.textContent =
+          "Henüz açılmadı";
+
+        since.textContent =
+          "Açılış zamanı bekleniyor.";
+
+        return;
+      }
+
+
+      const totalSeconds =
+        Math.floor(difference / 1000);
+
+
+      const days =
+        Math.floor(totalSeconds / 86400);
+
+
+      const hours =
+        Math.floor(
+          (totalSeconds % 86400) / 3600
+        );
+
+
+      const minutes =
+        Math.floor(
+          (totalSeconds % 3600) / 60
+        );
+
+
+      const seconds =
+        totalSeconds % 60;
+
+
+      counter.textContent =
+        `${days.toLocaleString("tr-TR")} gün ` +
+        `${two(hours)} saat ` +
+        `${two(minutes)} dakika ` +
+        `${two(seconds)} saniye`;
+
+
+      since.textContent =
+        `Başlangıç: ${
+          start.toLocaleString("tr-TR", {
+            dateStyle: "long",
+            timeStyle: "short"
+          })
+        }`;
+    }
+
+
+    updateCounter();
+
+
+    /*
+      Her saniye güncellenir.
+    */
+
+    setInterval(
+      updateCounter,
+      1000
+    );
+
+  </script>
+
+</body>
+</html>
