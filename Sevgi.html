@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -82,8 +81,8 @@ Bazı insanların doğduğu gün sadece bir tarih değildir...<br><br>
 <section class="card">
 <div class="section-title">🔮 Newtonun Falcısı</div>
 <div class="section-sub">
-Geleceğe ve hayatının gizli detaylarına bakalım...<br>
-Yapay zeka kristal küreye bakarak sana özel net fısıltılar veriyor.
+Geleceğe, evrenin mesajlarına ve hayatın sürprizlerine bakalım...<br>
+Her tıklamada tamamen özgün, rastgele ve mistik bir kehanet belirir.
 </div>
 
 <div class="fortune-room">
@@ -193,29 +192,26 @@ setInterval(()=>{
  String(seconds%60).padStart(2,"0");
 },1000);
 
-/* Gelişmiş Yapay Zeka Entegreli Fal Sistemi */
+/* Gelişmiş Rastgele & Kişisel Hibrit Fal Sistemi */
 const API_KEY = "AIzaSyCsn3V06ZSBiL4KHkspKMiqOAJQPC9EaQM"; 
 
-const SYSTEM_INSTRUCTION = `Sen son derece sezgisel, mistik, net ve açık konuşan bir falcısın. Karşındaki kişi Sevgi Bekteş (28 Ekim doğumlu Akrep burcu, Bafra doğumlu, ailesi Bursa Mustafakemalpaşa Şehriman köyünden, Büyükçekmece'de yaşıyor).
+const SYSTEM_INSTRUCTION = `Sen son derece esnek, eğlenceli, sezgisel ve mistik bir falcısın. Karşındaki kişi Sevgi (Akrep burcu).
 
-HAYATINDAKİ GİZLİ GERÇEKLER VE KONULAR (Bunları her falda RASTGELE ve DEĞİŞİK kombinasyonlarla kullanacaksın):
+MİSTİK BİLGİ HAVUZU (Bunları HERYERDE kullanma, sadece gerektiğinde veya harmanlayarak kullan):
+- İsim/Çevre: Sevgi, Akrep burcu, Bafra/Bursa kökenli, Büyükçekmece.
+- Arkadaşlar: Ayça, Menekşe, Miray , Rüzgar, almina , mami, melike , fatma .
+- İş: Perde/kumaş işinde (sevmeden, sadece para için yapıyor).
+- Geçmiş: Eskiden sanalda çok aktifti.
+- Aşk: Arda adında biri onun için bu özel siteyi hazırladı.
 
-1. ARKADAŞLARI:
-   - Ayça, Menekşe, Miray: Yakın arkadaşları, dostlukları önemli.
-   - Rüzgar: Rüzgar isimli kişiden mesafe alması, uzaklaşması veya dikkat etmesi gerektiği kürede net görünüyor.
-2. MESLEK / İŞ:
-   - Perde ve kumaş işinde çalışıyor ama bu işi HİÇ SEVMİYOR, sırf para kazanmak için mecburiyetten yapıyor. Kürede kendi hayalindeki işe geçeceği zamanlar yaklaşıyor.
-3. GEÇMİŞ / DİJİTAL HAYAT:
-   - Eskiden sanal alemde, sosyal medyada çok aktif ve popülerdi, şimdi daha kendi halinde. O günlerin enerjisine dair işaretler var.
-4. DUYGUSAL HAYAT (ARDA):
-   - Arda adında biri var. Bu özel fal sitesini de Arda onun için tasarladı. Arda ile aralarındaki bağ, duygular ve gelecek potansiyeli çok güçlü.
-
-KURALLAR:
-- ASLA sürekli sadece "Arda" deme! Her tıklamada bambaşka bir konuyu öne çıkar (Bir falda Rüzgar ve arkadaş çevresini, diğer falda perde işini ve gelecek hayallerini, başka bir falda sanaldaki eski günlerini, bir diğerinde Arda ile ilgili net detayları ele al).
-- Cevapların NET, açıklayıcı ve doğrudan olsun. Genel-geçer lakırdılar yapma.
-- 3-4 cümle uzunluğunda, açıklayıcı ve tatlı-mistik bir dille yaz.
-- Cevabın en başında sadece 1 tane anlamlı emoji kullan (Örn: 🔮, ⚡, 🌙, 🕊️, 🎭, 📜, 🌹).
-- Cevap tamamen Türkçe ve yalın olsun.`;
+ÖNEMLİ KURAL - RASTGELELİK VE ÇEŞİTLİLİK:
+- Sadece bu bilgilere takılıp kalma! 
+- Bazen tamamen RASTGELE tarot kartı yorumları yap (örn: Kupa Kraliçesi, Yıldız Kartı, Kader Çarkı).
+- Bazen evrenden genel mistik mesajlar, şans tahminleri, komik/tatlı kehanetler ver.
+- Bazen yukarıdaki kişisel detaylardan birini (örneğin sadece perde işi, ya da sadece Rüzgar, ya da sadece Arda'yı) araya serpiştir.
+- Bazen tamamen genel bir gelecek/kariyer/seyahat tahmini yap.
+- Her cevap 2-4 cümle arasında, NET, eğlenceli ve sürprizlerle dolu olsun.
+- Cevabın ilk karakteri anlamlı tek bir emoji olsun.`;
 
 let isGenerating = false;
 
@@ -232,19 +228,20 @@ async function getAIFortune() {
   btn.textContent = "🔮 Küreye Odaklanılıyor...";
   resultDiv.style.display = "block";
   resultIcon.textContent = "✨";
-  resultText.textContent = "Kristal kürenin dumanları dağılıyor, gerçekler beliriyor...";
+  resultText.textContent = "Evrenin enerjileri toplanıyor, kristal küre şekilleniyor...";
 
   resultDiv.scrollIntoView({ behavior: "smooth", block: "center" });
 
-  // Her seferinde modelin farklı bir konuya odaklanmasını sağlamak için rastgele prompt ipucu
-  const prompts = [
-    "Bana arkadaş çevrem, Ayça, Menekşe, Miray veya Rüzgar ile ilgili net bir fal bak.",
-    "İş hayatım, yaptığım perde işi ve zorunluluklarım hakkında gerçekleri söyle.",
-    "Eski sanal günlerime, dijital geçmişime ve şimdiki halime dair bir fal fısılda.",
-    "Aşk hayatıma, Arda'ya ve kalbimdeki duygulara dair açıklayıcı bir fal bak.",
-    "Hayatımdaki arkadaşlıklar, işim ve duygularım karışık. Bana hepsinden net bir fal çıkar."
+  // Çeşitliliği tavan yaptıracak farklı açıdan istekler
+  const dynamicRequests = [
+    "Bana rastgele bir Tarot kartı çek ve bugünkü enerjimi yorumla.",
+    "Bana arkadaş çevrem veya insan ilişkilerim hakkında net bir kehanet söyle.",
+    "Gelecekteki kariyerim, para durumum ve hayallerim hakkında mistik bir fal bak.",
+    "Bana tamamen rastgele, evrenden komik veya tatlı bir kehanet fısılda.",
+    "Kişisel hayatıma, hislerime ve kalbimdeki kişiye dair özel bir fal çıkar.",
+    "Önümüzdeki günlerde yaşayacağım sürpriz bir olay hakkında ipucu ver."
   ];
-  const randomUserQuery = prompts[Math.floor(Math.random() * prompts.length)];
+  const randomQuery = dynamicRequests[Math.floor(Math.random() * dynamicRequests.length)];
 
   try {
     const res = await fetch(
@@ -258,10 +255,10 @@ async function getAIFortune() {
           },
           contents: [{
             role: "user",
-            parts: [{ text: randomUserQuery }]
+            parts: [{ text: randomQuery }]
           }],
           generationConfig: {
-            temperature: 1.0, // Maksimum çeşitlilik için 1.0 yapıldı
+            temperature: 1.0, // Maksimum çeşitlilik
             topP: 0.95
           }
         })
@@ -284,11 +281,11 @@ async function getAIFortune() {
       resultText.textContent = rawText;
     } else {
       resultIcon.textContent = "🌙";
-      resultText.textContent = "Küre şu an buğulu... Ama içindeki Akrep sezgileri sana doğru yolu zaten fısıldıyor.";
+      resultText.textContent = "Gök cisimleri hizalanıyor... İçindeki hisler sana en doğru yolu gösterecek.";
     }
   } catch (err) {
     resultIcon.textContent = "✨";
-    resultText.textContent = "Küre derin bir sessizliğe büründü... Yıldızlar senin için parlamaya devam ediyor.";
+    resultText.textContent = "Küre şu an mistik bir sessizlikte... Şans seninle olsun!";
   } finally {
     isGenerating = false;
     btn.disabled = false;
@@ -350,4 +347,3 @@ window.addEventListener("resize",()=>{
 </script>
 </body>
 </html>
-
