@@ -78,7 +78,7 @@ Bazı insanların doğduğu gün sadece bir tarih değildir...<br><br>
 </section>
 
 <section class="card">
-<div class="section-title">🔮 Newto'nun Falcısı</div>
+<div class="section-title">🔮 Newtonun Falcısı</div>
 <div class="section-sub">
 Biraz geleceğe bakalım...<br>
 Bu cevaplar özel olarak senin için düşünülerek otomatik hazırlanmaktadır.
@@ -192,22 +192,126 @@ setInterval(()=>{
 },1000);
 
 /* fal */
-const fortunes=[
-["🌟","Doğru yolda ilerliyorsun. Şu an her şey istediğin gibi görünmese bile attığın küçük adımlar seni düşündüğünden çok daha güzel bir yere götürecek."],
-["🌙","Geçmişe bakmayı kesip ileriye bakmaya devam etmen gerekiyor. Önünde geçmişten çok daha güzel bir yol görünüyor."],
-["💗","Kalbinde uzun zamandır taşıdığın bir dilek var. Biraz daha sabırlı ol. Beklediğin güzel haber düşündüğünden daha yakın."],
-["🦋","Hayatında yeni bir sayfa açılıyor. Bu değişim sana beklemediğin bir mutluluk getirecek."],
-["✨","Yakında yüzünü güldürecek güzel bir gelişme yaşayacaksın. Küçük başlayan bir şey senin için çok daha anlamlı hale gelecek."],
-["🌹","Kalbinin istediği şeyden hemen vazgeçme. Bazı güzel şeylerin gerçekleşmesi biraz zaman alır."],
-["☀️","Üzerindeki sıkıntılı dönem yavaş yavaş dağılıyor. Önünde daha huzurlu günler var."],
-["🔮","Yakında önemli bir karar vereceksin. Kalbinin sesini dinlediğinde doğru cevabı bulacaksın."],
-["💫","Beklemediğin bir anda güzel bir mesaj veya haber alabilirsin."],
-["🫶","Değer verdiğin insanlarla ilgili güzel bir gelişme görünüyor. Uzun süre hatırlayacağın özel bir an yaşayabilirsin."],
-["🌌","Her şeyi fazla düşünmek yerine biraz akışına bırak. Hayat sana güzel bir sürpriz hazırlıyor olabilir."],
-["🕊️","Geçmişte kalan bir kırgınlığı bırakmanın zamanı gelmiş. Bunu yaptığında kendini çok daha hafif hissedeceksin."],
-["💎","Önünde ilk bakışta küçük görünen ama sana güzel bir değişimin kapısını açabilecek bir fırsat var."],
-["🌷","Uzun zamandır beklediğin bir konuda hareketlilik başlıyor. Sabırlı kalırsan sonucu seni mutlu edecek."],
-["⭐","Şansın yavaş yavaş dönüyor. Yakında üst üste birkaç güzel tesadüf yaşayabilirsin."]
+const fortunes = [
+["🌙","Son zamanlarda dışarıdan sakin görünsen de kafanın içinde aynı anda birçok şey dönüyor. Her şeyi herkese anlatmıyorsun. Bazı şeyleri kendi içinde çözmeyi tercih ediyorsun."],
+
+["♏","Akrep enerjin burada oldukça belirgin. İnsanları gözlemlemeyi seviyorsun ve birinin sana karşı davranışının değiştiğini çoğu zaman senden önce fark ediyorsun."],
+
+["✨","18 yaşına yaklaşırken hayatında yeni bir dönem başlıyor. Bu yaş sana sadece yeni bir sayı değil, kendini daha fazla tanıyacağın yepyeni bir dönem getirecek."],
+
+["🌷","İnsanlarla uğraştığın ve emek verdiğin iş sana düşündüğünden daha fazla şey kazandırıyor. Sabır konusunda eskisine göre çok daha güçlüsün."],
+
+["💗","Kalbinde şu sıralar küçük bir heyecan var. Bunu herkese anlatmıyorsun ve hatta bazen kendine bile itiraf etmekte zorlanıyorsun."],
+
+["🔮","Falında geçmişten gelen güçlü bir aile bağı çıkıyor. Memleket ve aile hikâyeleri senin için düşündüğünden daha önemli bir yerde duruyor."],
+
+["🌹","Bursa taraflarından gelen köklerinin sende bıraktığı güçlü ve inatçı bir taraf var. Bir şeyi gerçekten istediğinde kolay kolay vazgeçmiyorsun."],
+
+["🌌","Bazen bulunduğun ortamdan uzaklaşıp kendi dünyana çekilmek istiyorsun. Özellikle geceleri düşüncelerinin daha fazla arttığı bir dönemden geçiyorsun."],
+
+["💫","Yakında seni şaşırtacak bir konuşma görünüyor. Söylenecek şey büyük olmak zorunda değil; fakat sende bırakacağı etki beklediğinden büyük olabilir."],
+
+["🦋","Bir süredir hayatındaki bazı şeylerin eskisi gibi olmadığını hissediyorsun. Aslında bu kötüye gidiş değil, büyüdüğünün bir işareti."],
+
+["⭐","Doğum günün yaklaştıkça eski halinle yeni halin arasında bir fark hissedeceksin. Bazı insanlara bakış açın değişecek."],
+
+["☀️","Çalışırken yorulsan da kendi emeğinin karşılığını almanın sende ayrı bir gurur oluşturduğunu görüyorum."],
+
+["🌙","Perde ve kumaşlarla uğraşırken aslında insanlardan çok şey öğreniyorsun. Kimin samimi, kimin sadece konuştuğunu zamanla daha iyi ayırt etmeye başlamışsın."],
+
+["💎","Hayatında sana dışarıdan küçük görünen fakat senin için önemli olan bir hedef var. Bunu gerçekleştirdiğinde kendinle gurur duyacaksın."],
+
+["🫶","Yakın çevrende seni gerçekten anlayan birkaç insan var. Sayıları fazla değil ama sen zaten çok fazla insan istemiyorsun; gerçek olan birkaç kişi sana yetiyor."],
+
+["🌷","Bazen çok güçlü görünüyorsun ama aslında bazı şeyleri fazlasıyla kafana takıyorsun. Özellikle değer verdiğin insanların davranışlarını uzun uzun düşünüyorsun."],
+
+["🔮","Falında uzaklardan gelen bir şehir ve güçlü bir memleket bağı çıkıyor. Aile geçmişinin sende bıraktığı bazı alışkanlıkları fark etmeden taşıyorsun."],
+
+["💗","Birinin sana karşı olan ilgisini anlamaya çalıştığın bir dönemdesin. Fakat bunu belli etmemeye çalışırken bazen kendini ele veriyorsun."],
+
+["✨","Büyük bir değişiklik için acele etmene gerek yok. Şu anda küçük küçük ilerlemen senin için daha doğru görünüyor."],
+
+["🌹","Kalbine aldığın insanlara karşı sandığından daha korumacısın. Birini gerçekten sevdiğinde onun küçük detaylarını bile hatırlıyorsun."],
+
+["♏","Akrep olduğun için duygularını saklama konusunda oldukça başarılısın. Fakat gözlerin bazen söylemek istemediğin şeyleri senden önce anlatıyor."],
+
+["🌌","Bir süredir gelecekle ilgili bazı planlar kuruyorsun ama hepsini yüksek sesle söylemiyorsun. İçinde tuttuğun bir hedef var."],
+
+["💫","Yakında geçmişte yaşadığın bir olay tekrar aklına gelecek. Bu kez aynı şekilde üzülmek yerine olaya daha farklı bakacaksın."],
+
+["🦋","18 yaşınla birlikte bazı kararların daha fazla senin elinde olacak. Bu özgürlük güzel gelecek ama beraberinde yeni sorumluluklar da getirecek."],
+
+["☀️","Büyükçekmece'de geçen sıradan bir günün içinde bile seni mutlu eden küçük şeyler var. Senin mutluluğun çoğu zaman büyük olaylardan değil, küçük ayrıntılardan geliyor."],
+
+["⭐","Bazen bir mesajın gelmesini beklerken telefonu gereğinden fazla kontrol ettiğin oluyor. Bunu kimseye belli etmesen de içten içe biliyorsun."],
+
+["💗","Kalbinin bir köşesinde yeni yeni büyüyen bir duygu var. Henüz bunun nereye gideceğini bilmiyorsun ama seni mutlu ettiği kesin."],
+
+["🌙","Arda ismi bu falda çok hafif görünüyor... Fakat burada asıl önemli olan isim değil, o ismi düşündüğünde içinde oluşan his."],
+
+["🌹","Arda konusunda aceleci davranmak yerine bazı şeyleri zamana bırakman daha güzel olabilir. Bazen bir insanı tanıdıkça hislerin çok daha netleşir."],
+
+["✨","Bazen bir insanın sana söylediği tek bir cümle bütün gününü değiştirebilir. Önümüzdeki dönemde böyle küçük ama etkili bir an görünüyor."],
+
+["🔮","Bir konuda 'acaba?' diye düşündüğün çok belli. Fal sana cevabı hemen aramak yerine yaşananları izlemeni söylüyor."],
+
+["💫","KalbiniHerkese açmıyorsun. Bu yüzden birinin hayatında özel bir yer edinmesi senin için kolay gerçekleşen bir şey değil."],
+
+["🫶","Çevrende seni güldüren bir insan var. Onunla konuştuğunda normalde düşündüğün bazı şeyleri bir süreliğine unutuyorsun."],
+
+["🌷","Hayatında yeni bir başlangıç enerjisi var. Bu başlangıç hem sosyal hayatında hem de duygusal tarafında kendini gösterebilir."],
+
+["🌌","Memleket konusunda güçlü bir aidiyet hissin var. Bursa ve Mustafakemalpaşa taraflarından gelen bağların sende düşündüğünden daha fazla iz bırakmış."],
+
+["⭐","Şehriman ismi falında kısa bir süreliğine beliriyor. Geçmişten gelen aile bağlarının gelecekte kendi hikâyende de önemli bir yeri olabilir."],
+
+["💎","Bafra ile başlayan doğum hikâyenin bugün geldiği noktaya baktığında hayatında ne kadar çok şeyin değiştiğini fark edeceğin bir dönemdesin."],
+
+["☀️","İnsanların seni ilk gördüğünde düşündüğünden daha farklı bir karakterin var. İlk başta mesafeli görünsen de güvendiğin insanlara karşı oldukça sıcak olabiliyorsun."],
+
+["🦋","Bazen bir şeyi çok istediğinde gerçekleşmeyecekmiş gibi düşünüp kendini geri çekiyorsun. Oysa biraz daha kendine güvenmen gerekiyor."],
+
+["💗","Kalbinde biriyle ilgili güzel bir merak var. Henüz her şeyin cevabını bilmiyorsun ve belki de bilmemek şu an daha güzel."],
+
+["🌙","Gece saatlerinde geçmiş konuşmaları tekrar tekrar düşündüğün oluyor. Falın sana artık bazı şeyleri fazla kurcalamamanı söylüyor."],
+
+["🔮","Önünde seni şaşırtacak bir tesadüf var. İlk başta sıradan gözükecek fakat sonradan 'bunun olması gerekiyormuş' diye düşünebilirsin."],
+
+["🌹","Yeni yaşında kendine verdiğin değer artacak. Daha önce izin verdiğin bazı şeylere artık izin vermeyeceksin."],
+
+["✨","Hayatında birinin sana düşündüğünden daha fazla değer verdiğini fark edeceğin bir dönem geliyor."],
+
+["💫","Bazı duyguların yeni olduğu için onları anlamaya çalışıyorsun. Hislerini bastırmak yerine kendine karşı dürüst olman sana iyi gelecek."],
+
+["⭐","Doğum gününde dileyeceğin bir şey var. Belki kimseye söylemeyeceksin ama o dileğin senin için düşündüğünden daha önemli."],
+
+["🌷","İş hayatında öğrendiğin sabır ileride başka bir konuda karşına çıkacak. Şu an sıradan görünen deneyimlerin aslında seni geleceğe hazırlıyor."],
+
+["🫶","Sana gerçekten değer veren insanların yanında kendini daha rahat hissediyorsun. Bundan sonra hayatında daha çok böyle insanlara yer açacaksın."],
+
+["🌌","Bazen bulunduğun şehirden, ortamdan veya rutinden uzaklaşıp yeni yerler görmek istediğin oluyor. Önünde küçük bir kaçış veya güzel bir değişiklik enerjisi var."],
+
+["💗","Birinin adını görünce istemsizce gülümsüyorsan, falın bunun üzerinde fazla düşünmemeni söylüyor. Güzel hissetmek zaten başlı başına güzel bir şey."],
+
+["🔮","Falın sonlarına doğru kalp ve yıldız yan yana geliyor. Bu, hayatında seni heyecanlandıran bir şeyin yavaş yavaş daha anlamlı hale geleceğini gösteriyor."],
+
+["🌹","18 yaşının sana bırakacağı en güzel şeylerden biri kendini daha iyi tanımak olacak. Neyden hoşlandığını, neyi istemediğini ve kimleri yanında istediğini daha net göreceksin."],
+
+["☀️","Geleceğinde çok fazla güzel anı var. Şu an bazı şeyleri fazla düşünsen de zaman geçtikçe bugün kafana taktığın birçok şeyin aslında ne kadar küçük olduğunu anlayacaksın."],
+
+["🌙","Arda ile ilgili kafanda bazı soru işaretleri olabilir. Her şeyi hemen anlamlandırmaya çalışma. Bazı güzel şeyler zaman geçtikçe kendiliğinden ortaya çıkar."],
+
+["💗","Arda ismi bu kez daha belirgin çıkıyor. Onu düşündüğünde oluşan o küçük heyecanı görmezden gelmek yerine, duygularının doğal şekilde ilerlemesine izin vermen gerekiyor."],
+
+["✨","Falında bir isim beliriyor... Arda. Bu isim burada tesadüfen görünmüyor gibi. Onunla ilgili seni gülümseten küçük bir anın yakın zamanda tekrar aklına gelmesi mümkün."],
+
+["🌹","Kalbinin bir köşesinde Arda'ya karşı oluşan duyguyu saklamaya çalışsan da fal bunu biraz ele veriyor. Acele etmek yerine hislerinin kendi zamanında gelişmesine izin ver."],
+
+["🔮","Arda ile ilgili önümüzdeki dönemde küçük bir gelişme görünüyor. Büyük bir olay olmak zorunda değil; kısa bir konuşma veya mesaj bile seni uzun süre düşündürebilir."],
+
+["⭐","Falın sonlarına doğru Arda ismi tekrar beliriyor. Bu kez önemli olan onun ne yapacağından çok, senin yanında kendini nasıl hissettiğin."],
+
+["❤️","Falın burada biraz susuyor... Çünkü bazı şeyleri geleceğin söylemesi gerekiyor. Ama bir konuda çok net: Önünde seni gülümsetecek güzel günler var."]
 ];
 
 let last=-1;
