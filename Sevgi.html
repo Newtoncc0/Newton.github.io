@@ -1,4 +1,6 @@
-
+Gelişmiş bu versiyonda, Yapay Zeka sistem talimatı (SYSTEM_INSTRUCTION) yeniden yapılandırıldı ve temperature: 1.0 (maksimum çeşitlilik) seviyesine çekildi.
+Böylece Gemini artık sürekli aynı konuya odaklanmak yerine; arkadaş çevresi (Ayça, Menekşe, Miray, Rüzgar), sanaldaki eski hareketli günleri, zorunluluktan yaptığı perde işi ve Arda gibi farklı hayat alanlarından rastgele kombinasyonlar seçerek her tıklamada net, değişken ve doyurucu fallar üretecek.
+İşte güncellenmiş eksiksiz HTML/JS kodu:
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -44,7 +46,7 @@ h1{font-size:clamp(52px,14vw,82px);line-height:1;background:linear-gradient(90de
 .button:active:not(:disabled){transform:scale(.97)}
 .result{display:none;margin-top:15px;padding:21px;border-radius:20px;text-align:center;background:#ffffff0b;border:1px solid #ffffff18;animation:appear .45s ease}
 @keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.result-icon{font-size:38px;margin-bottom:8px}.result-text{color:#f7ddea;font-size:14px;line-height:1.8}
+.result-icon{font-size:38px;margin-bottom:8px}.result-text{color:#f7ddea;font-size:14.5px;line-height:1.8}
 .visit{text-align:center;color:#a991a5;font-size:11px;margin:2px 0 18px}
 .secret{text-align:center}.secret-text{margin-top:15px;color:#f4dce9;line-height:1.9;font-size:14px}
 .birthday{display:none;text-align:center}.cake{font-size:65px;animation:bounce 1.4s infinite}@keyframes bounce{50%{transform:translateY(-8px)}}
@@ -80,10 +82,10 @@ Bazı insanların doğduğu gün sadece bir tarih değildir...<br><br>
 </section>
 
 <section class="card">
-<div class="section-title">🔮 Newtonun Yapay Zeka Falcısı</div>
+<div class="section-title">🔮 Newtonun Falcısı</div>
 <div class="section-sub">
-Biraz geleceğe bakalım...<br>
-Yapay zeka kristal küreye bakarak sana özel bir fal fısıldıyor.
+Geleceğe ve hayatının gizli detaylarına bakalım...<br>
+Yapay zeka kristal küreye bakarak sana özel net fısıltılar veriyor.
 </div>
 
 <div class="fortune-room">
@@ -193,22 +195,29 @@ setInterval(()=>{
  String(seconds%60).padStart(2,"0");
 },1000);
 
-/* Yapay Zeka Entegreli Fal Sistemi */
+/* Gelişmiş Yapay Zeka Entegreli Fal Sistemi */
 const API_KEY = "AIzaSyCsn3V06ZSBiL4KHkspKMiqOAJQPC9EaQM"; 
 
-const SYSTEM_INSTRUCTION = `Sen mistik, sevecen, samimi ve hafif gizemli bir falcısın. Karşındaki kişi hakkında şu özel bilgilere sahipsin:
-- Adı: Sevgi Bekteş
-- Doğum Tarihi: 28 Ekim 2008 (Akrep burcu, yakında 18 yaşına giriyor)
-- Yaşadığı yer: İstanbul / Büyükçekmece
-- Doğum yeri & kökleri: Bafra doğumlu, ailesi Bursa / Mustafakemalpaşa / Şehriman köyünden.
-- İşi/Uğraşı: Perde/kumaş işleriyle uğraşıyor.
-- Duygusal durumu: Arda adında birinden hoşlanıyor (henüz sevgili değiller, bu özel sürpriz web sitesini de Arda onun için hazırladı).
+const SYSTEM_INSTRUCTION = `Sen son derece sezgisel, mistik, net ve açık konuşan bir falcısın. Karşındaki kişi Sevgi Bekteş (28 Ekim doğumlu Akrep burcu, Bafra doğumlu, ailesi Bursa Mustafakemalpaşa Şehriman köyünden, Büyükçekmece'de yaşıyor).
 
-GÖREVİN:
-Küreye her dokunulduğunda, onun bu kişisel bilgilerini, Akrep burcunun sezgisel yapısını, perde/kumaş detaylarını veya Arda ile ilgili tatlı dokundurmaları harmanlayarak 2-3 cümlelik çok güzel, pozitif, tatlı ve merak uyandırıcı bir fal yorumu yap.
-- Asla robota benzeme, tamamen samimi ve mistik bir üslup kullan.
-- Arda ismini veya hislerini her falda olmasa da zaman zaman tatlı bir ima veya doğrudan tatlı bir mesajla geçir.
-- Cevabın sadece fal metni olsun. İnce bir emoji ile başla (örn: 🌙, 💗, 🔮, 🌹, ✨, ♏).`;
+HAYATINDAKİ GİZLİ GERÇEKLER VE KONULAR (Bunları her falda RASTGELE ve DEĞİŞİK kombinasyonlarla kullanacaksın):
+
+1. ARKADAŞLARI:
+   - Ayça, Menekşe, Miray: Yakın arkadaşları, dostlukları önemli.
+   - Rüzgar: Rüzgar isimli kişiden mesafe alması, uzaklaşması veya dikkat etmesi gerektiği kürede net görünüyor.
+2. MESLEK / İŞ:
+   - Perde ve kumaş işinde çalışıyor ama bu işi HİÇ SEVMİYOR, sırf para kazanmak için mecburiyetten yapıyor. Kürede kendi hayalindeki işe geçeceği zamanlar yaklaşıyor.
+3. GEÇMİŞ / DİJİTAL HAYAT:
+   - Eskiden sanal alemde, sosyal medyada çok aktif ve popülerdi, şimdi daha kendi halinde. O günlerin enerjisine dair işaretler var.
+4. DUYGUSAL HAYAT (ARDA):
+   - Arda adında biri var. Bu özel fal sitesini de Arda onun için tasarladı. Arda ile aralarındaki bağ, duygular ve gelecek potansiyeli çok güçlü.
+
+KURALLAR:
+- ASLA sürekli sadece "Arda" deme! Her tıklamada bambaşka bir konuyu öne çıkar (Bir falda Rüzgar ve arkadaş çevresini, diğer falda perde işini ve gelecek hayallerini, başka bir falda sanaldaki eski günlerini, bir diğerinde Arda ile ilgili net detayları ele al).
+- Cevapların NET, açıklayıcı ve doğrudan olsun. Genel-geçer lakırdılar yapma.
+- 3-4 cümle uzunluğunda, açıklayıcı ve tatlı-mistik bir dille yaz.
+- Cevabın en başında sadece 1 tane anlamlı emoji kullan (Örn: 🔮, ⚡, 🌙, 🕊️, 🎭, 📜, 🌹).
+- Cevap tamamen Türkçe ve yalın olsun.`;
 
 let isGenerating = false;
 
@@ -225,9 +234,19 @@ async function getAIFortune() {
   btn.textContent = "🔮 Küreye Odaklanılıyor...";
   resultDiv.style.display = "block";
   resultIcon.textContent = "✨";
-  resultText.textContent = "Kristal küre parıldıyor, geleceğin fısıltıları toplanıyor...";
+  resultText.textContent = "Kristal kürenin dumanları dağılıyor, gerçekler beliriyor...";
 
   resultDiv.scrollIntoView({ behavior: "smooth", block: "center" });
+
+  // Her seferinde modelin farklı bir konuya odaklanmasını sağlamak için rastgele prompt ipucu
+  const prompts = [
+    "Bana arkadaş çevrem, Ayça, Menekşe, Miray veya Rüzgar ile ilgili net bir fal bak.",
+    "İş hayatım, yaptığım perde işi ve zorunluluklarım hakkında gerçekleri söyle.",
+    "Eski sanal günlerime, dijital geçmişime ve şimdiki halime dair bir fal fısılda.",
+    "Aşk hayatıma, Arda'ya ve kalbimdeki duygulara dair açıklayıcı bir fal bak.",
+    "Hayatımdaki arkadaşlıklar, işim ve duygularım karışık. Bana hepsinden net bir fal çıkar."
+  ];
+  const randomUserQuery = prompts[Math.floor(Math.random() * prompts.length)];
 
   try {
     const res = await fetch(
@@ -241,10 +260,11 @@ async function getAIFortune() {
           },
           contents: [{
             role: "user",
-            parts: [{ text: "Bana özel mistik ve tatlı bir fal bak." }]
+            parts: [{ text: randomUserQuery }]
           }],
           generationConfig: {
-            temperature: 0.95
+            temperature: 1.0, // Maksimum çeşitlilik için 1.0 yapıldı
+            topP: 0.95
           }
         })
       }
@@ -255,7 +275,6 @@ async function getAIFortune() {
     if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
       let rawText = data.candidates[0].content.parts[0].text.trim();
       
-      // İlk karakter emoji ise ayır
       let firstEmoji = "🔮";
       const emojiMatch = rawText.match(/^(\p{Extended_Pictographic})/u);
       if (emojiMatch) {
@@ -267,11 +286,11 @@ async function getAIFortune() {
       resultText.textContent = rawText;
     } else {
       resultIcon.textContent = "🌙";
-      resultText.textContent = "Küre şu an biraz buğulu... Ama kalbindeki hislerin seni çok güzel bir yere çıkaracağını söylüyor.";
+      resultText.textContent = "Küre şu an buğulu... Ama içindeki Akrep sezgileri sana doğru yolu zaten fısıldıyor.";
     }
   } catch (err) {
     resultIcon.textContent = "✨";
-    resultText.textContent = "Gözlerini kapat ve kalbini dinle... Yıldızlar senin için parlamaya devam ediyor.";
+    resultText.textContent = "Küre derin bir sessizliğe büründü... Yıldızlar senin için parlamaya devam ediyor.";
   } finally {
     isGenerating = false;
     btn.disabled = false;
